@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+group = 'com.ticket'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Lombok
+    implementation 'org.projectlombok:lombok:1.18.28'
+    annotationProcessor 'org.projectlombok:lombok:1.18.28'
+
+    // Jackson
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+}
+
+jar {
+    enabled = true
+}
